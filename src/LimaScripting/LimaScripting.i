@@ -1,12 +1,11 @@
 // ATTENTION : selon la plate-forme cible, il faut modifier SWIG_FLAGS de 
 // maniere a redefinir IN_STD.
 
-%title "Interface Python pour Lima", before
-%text %{
+/*
   Du a un bug du generateur de doc de SWIG, les vrais noms des constructeurs
     sont pour les polygones Triangle et Quadrangle et pour les polyedres, 
     Tetraedre, Prisme, Pyramide, Hexaedre, Heptaedre et Octoedre. 
-%}
+*/
 %module Lima
 %{
 //#undef __sun
@@ -273,9 +272,9 @@ using namespace Lima;
 	};	// preparation_parametrable
 };
 
-%section "Exemples", pre
-%text %{
-  from Lima import *
+/* Exemple en langage python :
+
+  from LimaScripting import *
   # lecture
   m = Maillage()
   m.lire("puits.unv")
@@ -302,4 +301,4 @@ using namespace Lima;
 
   # sauvegarde
   m.ecrire("puits.mli")
-%}
+*/

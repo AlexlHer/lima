@@ -24,7 +24,7 @@ class Bras : public Handle_BrasInterne
 public:
   Bras(const Noeud& n0,  const Noeud& n1);
 #ifdef SWIG
-  %name(Bras_id)
+  %rename(Bras_id) Bras(size_type n, const Noeud& n0,  const Noeud& n1);
 #endif
   Bras(size_type n, const Noeud& n0,  const Noeud& n1);
 

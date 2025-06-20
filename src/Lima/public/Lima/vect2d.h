@@ -19,7 +19,7 @@ public:
   double        y() const;
   // Lecture de la ieme composante du vecteur
 #ifdef SWIG
-  %name(get_coo)
+  %rename(get_coo) coo(size_type i) const;
 #endif
   double        coo(size_type i) const;
 
@@ -29,7 +29,7 @@ public:
   void          set_y(double d);
   // Mise a jour de la ieme composante du vecteur
 #ifdef SWIG
-  %name(set_coo)
+  %rename(set_coo) coo(size_type i, double d);
 #endif
   void          coo(size_type i, double d);
 

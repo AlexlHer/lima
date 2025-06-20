@@ -54,7 +54,7 @@ public:
   Noeud               noeud_id(size_type id) const;
   
 #ifdef SWIG
-  %name(contenir_noeud)
+  %rename(contenir_noeud) contenir(const Noeud& nd) const;
 #endif
   bool                contenir(const Noeud& nd) const;
   //  Liste des attributs des noeuds.

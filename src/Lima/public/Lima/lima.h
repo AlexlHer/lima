@@ -90,7 +90,7 @@ extern "C" {
 #endif
     LM_FF_INCONNU
   };  
-  typedef enum LM_FORMAT_FICHIER LM_FORMAT_FICHIER;
+//  typedef enum LM_FORMAT_FICHIER LM_FORMAT_FICHIER;
 
 
   /** Niveau de preparation du maillage pour les codes 
@@ -113,7 +113,7 @@ extern "C" {
     LM_PR_CODE_T = 7,
     LM_PR_INCONNU
   };
-  typedef enum LM_PREPARATION LM_PREPARATION;
+//  typedef enum LM_PREPARATION LM_PREPARATION;
 
 
 

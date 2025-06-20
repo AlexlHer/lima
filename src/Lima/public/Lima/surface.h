@@ -61,7 +61,7 @@ public:
   Polygone                polygone_id(size_type id) const;
   
 #ifdef SWIG
-  %name(contenir_polygone)
+  %rename(contenir_polygone) contenir(const Polygone& pg) const;
 #endif
   bool                    contenir(const Polygone& pg) const;
   //  Liste des attributs des polygones.
@@ -75,7 +75,7 @@ public:
   Bras                    bras_id(size_type id) const;
   
 #ifdef SWIG
-  %name(contenir_bras)
+  %rename(contenir_bras) contenir(const Bras& br) const;
 #endif
   bool                    contenir(const Bras& br) const;
   //  Liste des attributs des bras.
@@ -89,7 +89,7 @@ public:
   Liste_attribut&         att_noeuds();
   
 #ifdef SWIG
-  %name(contenir_noeud)
+  %rename(contenir_noeud) contenir(const Noeud& nd) const;
 #endif
   bool                contenir(const Noeud& nd) const;
   
