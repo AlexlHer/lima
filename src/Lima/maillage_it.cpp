@@ -2475,7 +2475,7 @@ void _MaillageInterne::lire_structure (
 
 	try
 	{
-		auto_ptr<_Reader>	reader (_Reader::create (this,fichier,format,num));
+		unique_ptr<_Reader>	reader (_Reader::create (this,fichier,format,num));
 		if (0 == reader.get ( ))
 			throw read_erreur("Impossible d'initialiser le module de lecture\n");
 
@@ -2496,7 +2496,7 @@ void _MaillageInterne::lire(const string& fichier, format_t format, size_type nu
 
 	try
 	{
-		auto_ptr<_Reader>	reader (_Reader::create (this,fichier,format,num));
+		unique_ptr<_Reader>	reader (_Reader::create (this,fichier,format,num));
 		if (0 == reader.get ( ))
 			throw read_erreur("Impossible d'initialiser le module de lecture\n");
 
