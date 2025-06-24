@@ -141,38 +141,40 @@ public:
 
   // Dimension du maillage.
 #ifdef SWIG
-  %name(set_dimension)
+  %rename(set_dimension) dimension(dim_t dim);
 #endif
   void          dimension(dim_t dim);
   // Unité de longueur du maillage.
 #ifdef SWIG
-  %name(set_unite_longueur)
+  %rename(set_unite_longueur) unite_longueur(double unilo);
 #endif
   void          unite_longueur(double unilo);
   // Unité d'angle du maillage.
 #ifdef SWIG
-  %name(set_unite_angle)
+  %rename(set_unite_angle) unite_angle(double unia);
 #endif
   void          unite_angle(double unia);
   // Type de géométrie du maillage.
 #ifdef SWIG
-  %name(set_type_geometrie)
+  %rename(set_type_geometrie) type_geometrie(geometrie_t geom);
 #endif
   void          type_geometrie(geometrie_t geom);
   // Type de coordonnée du maillage.
 #ifdef SWIG
-  %name(set_type_coordonnee)
+  %rename(set_type_coordonnee) type_coordonnee(coordonnee_t tycoo);
 #endif
   void          type_coordonnee(coordonnee_t tycoo);
   /// Titre du maillage.
 #ifdef SWIG
-  %name(set_titre) void titre(const char* titre);
+  %rename(set_titre) titre(const char* titre);
+  void titre (const char* titre);
 #else
   void          titre(const IN_STD string& titre);
 #endif
   /// Date du maillage.
 #ifdef SWIG
-  %name(set_date) void date(const char* date);
+  %rename(set_date) date(const char* date);
+  void date(const char* date);
 #else
   void          date(const IN_STD string& date);
 #endif
@@ -186,19 +188,19 @@ public:
   // Noeud d'ID n.
   Noeud                   noeud_id(size_type id) const;    
 #ifdef SWIG
-  %name(contenir_noeud)
+  %rename(contenir_noeud) contenir(const Noeud& nd) const;
 #endif
   bool                    contenir(const Noeud& nd) const;
 #ifdef SWIG
-  %name(ajouter_noeud)
+  %rename(ajouter_noeud) ajouter(const Noeud& nd);
 #endif
   void                    ajouter(const Noeud& nd);
 #ifdef SWIG
-  %name(retirer_noeud)
+  %rename(retirer_noeud) retirer(const Noeud& nd);
 #endif
   void                    retirer(const Noeud& nd);
 #ifdef SWIG
-  %name(deplacer_noeud)
+  %rename(deplacer_noeud) deplacer(size_type id, double x, double y, double z);
 #endif
   void                    deplacer(size_type id, double x, double y, double z);
   //  Liste des attributs des noeuds.
@@ -211,15 +213,15 @@ public:
   // Bras d'ID n.
   Bras                    bras_id(size_type id) const;
 #ifdef SWIG
-  %name(contenir_bras)
+  %rename(contenir_bras) contenir(const Bras& br) const;
 #endif
   bool                    contenir(const Bras& br) const;
 #ifdef SWIG
-  %name(ajouter_bras)
+  %rename(ajouter_bras) ajouter(const Bras& br);
 #endif
   void                    ajouter(const Bras& br);
 #ifdef SWIG
-  %name(retirer_bras)
+  %rename(retirer_bras) retirer(const Bras& br);
 #endif
   void                    retirer(const Bras& br);
   //  Liste des attributs des bras.
@@ -232,15 +234,15 @@ public:
   // Polygone d'ID n.
   Polygone                polygone_id(size_type id) const;
 #ifdef SWIG
-  %name(contenir_polygone)
+  %rename(contenir_polygone)contenir(const Polygone& pg) const;
 #endif
   bool                    contenir(const Polygone& pg) const;
 #ifdef SWIG
-  %name(ajouter_polygone)
-#endif
+  %rename(ajouter_polygone) ajouter(const Polygone& pg);
+#endif 
   void                    ajouter(const Polygone& pg);
 #ifdef SWIG
-  %name(retirer_polygone)
+  %rename(retirer_polygone) retirer(const Polygone& pg);
 #endif
   void                    retirer(const Polygone& pg);
   //  Liste des attributs des polygones.
@@ -253,15 +255,15 @@ public:
   // Polyedre d'ID n.
   Polyedre                polyedre_id(size_type id) const;
 #ifdef SWIG
-  %name(contenir_polyedre)
+  %rename(contenir_polyedre) contenir(const Polyedre& pd) const;
 #endif
   bool                    contenir(const Polyedre& pd) const;
 #ifdef SWIG
-  %name(ajouter_polyedre)
+  %rename(ajouter_polyedre) ajouter(const Polyedre& pd);
 #endif
   void                    ajouter(const Polyedre& pd);
 #ifdef SWIG
-  %name(retirer_polyedre)
+  %rename(retirer_polyedre) retirer(const Polyedre& pd);
 #endif
   void                    retirer(const Polyedre& pd);
   //  Liste des attributs des polyèdres.
@@ -271,7 +273,7 @@ public:
   size_type               nb_nuages() const;
   // Nuage numéro n.
 #ifdef SWIG
-  %name(nuage_id)
+  %rename(nuage_id) nuage(size_type n) const;
 #endif
   Nuage                   nuage(size_type n) const;
   // Nuage de nom str.
@@ -281,15 +283,15 @@ public:
   Nuage                   nuage(const char* str) const;    
 #endif
 #ifdef SWIG
-  %name(contenir_nuage)
+  %rename(contenir_nuage) contenir(const Nuage& nu) const;
 #endif
   bool                    contenir(const Nuage& nu) const;
 #ifdef SWIG
-  %name(ajouter_nuage)
+  %rename(ajouter_nuage) ajouter(const Nuage& nu);
 #endif
   void                    ajouter(const Nuage& nu);
 #ifdef SWIG
-  %name(retirer_nuage)
+  %rename(retirer_nuage) retirer(const Nuage& nu);
 #endif
   void                    retirer(const Nuage& nu);
   //  Liste des attributs des nuages.
@@ -299,7 +301,7 @@ public:
   size_type               nb_lignes() const;
   // Ligne numéro n.
 #ifdef SWIG
-  %name(ligne_id)
+  %rename(ligne_id) ligne(size_type n) const;
 #endif
   Ligne                   ligne(size_type n) const;
   // Ligne de nom str.
@@ -309,15 +311,15 @@ public:
   Ligne                   ligne(const char* str) const;    
 #endif
 #ifdef SWIG
-  %name(contenir_ligne)
+  %rename(contenir_ligne) contenir(const Ligne& li) const;
 #endif
   bool                    contenir(const Ligne& li) const;
 #ifdef SWIG
-  %name(ajouter_ligne)
+  %rename(ajouter_ligne) ajouter(const Ligne& li);
 #endif
   void                    ajouter(const Ligne& li);
 #ifdef SWIG
-  %name(retirer_ligne)
+  %rename(retirer_ligne) retirer(const Ligne& li);
 #endif
   void                    retirer(const Ligne& li);
   //  Liste des attributs des lignes.
@@ -327,7 +329,7 @@ public:
   size_type               nb_surfaces() const;
   // Surface numéro n.
 #ifdef SWIG
-  %name(surface_id)
+  %rename(surface_id) surface(size_type n) const;
 #endif
   Surface                 surface(size_type n) const;
   // Surface de nom str.
@@ -337,15 +339,15 @@ public:
   Surface                 surface(const char* str) const;    
 #endif
 #ifdef SWIG
-  %name(contenir_surface)
+  %rename(contenir_surface) contenir(const Surface& su) const;
 #endif
   bool                    contenir(const Surface& su) const;
 #ifdef SWIG
-  %name(ajouter_surface)
+  %rename(ajouter_surface)  ajouter(const Surface& su);
 #endif
   void                    ajouter(const Surface& su);
 #ifdef SWIG
-  %name(retirer_surface)
+  %rename(retirer_surface) retirer(const Surface& su);
 #endif
   void                    retirer(const Surface& su);
   //  Liste des attributs des surfaces.
@@ -355,7 +357,7 @@ public:
   size_type               nb_volumes() const;
   // Volume numéro n.
 #ifdef SWIG
-  %name(volume_id)
+  %rename(volume_id) volume(size_type n) const;
 #endif
   Volume                  volume(size_type n) const;
   // Volume de nom str.
@@ -365,15 +367,15 @@ public:
   Volume                  volume(const char* str) const;    
 #endif
 #ifdef SWIG
-  %name(contenir_volume)
+  %rename(contenir_volume) contenir(const Volume& vo) const;
 #endif
   bool                    contenir(const Volume& vo) const;
 #ifdef SWIG
-  %name(ajouter_volume)
+  %rename(ajouter_volume) ajouter(const Volume& vo);
 #endif
   void                    ajouter(const Volume& vo);
 #ifdef SWIG
-  %name(retirer_volume)
+  %rename(retirer_volume) retirer(const Volume& vo);
 #endif
   void                    retirer(const Volume& vo);
   //  Liste des attributs des volumes.

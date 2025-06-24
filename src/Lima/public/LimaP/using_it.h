@@ -29,7 +29,7 @@ using std::reverse;
 using std::copy;
 using std::istrstream;
 
-using std::auto_ptr;
+using std::unique_ptr;
 
 using std::iterator;
 using std::map;
@@ -74,7 +74,7 @@ using std::max_element;
 using std::reverse;
 using std::copy;
 
-using std::auto_ptr;
+using std::unique_ptr;
 
 using std::exception;
 

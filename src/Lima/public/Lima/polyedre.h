@@ -40,85 +40,53 @@ public:
 
   Polyedre();
 #ifdef SWIG
-  %name(Tetraedre)
+  %rename(Tetraedre) Polyedre(const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3);
 #endif
-  Polyedre(const Noeud& n0,  const Noeud& n1,
-	   const Noeud& n2,  const Noeud& n3);
+  Polyedre(const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3);
 #ifdef SWIG
-  %name(Pyramide)
+  %rename(Pyramide) Polyedre(const Noeud& n0,  const Noeud& n1, const Noeud& n2, const Noeud& n3,  const Noeud& n4);
 #endif
-  Polyedre(const Noeud& n0,  const Noeud& n1, const Noeud& n2,
-	   const Noeud& n3,  const Noeud& n4);
+  Polyedre(const Noeud& n0,  const Noeud& n1, const Noeud& n2, const Noeud& n3,  const Noeud& n4);
 #ifdef SWIG
-  %name(Prisme)
+  %rename(Prisme) Polyedre(const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3, const Noeud& n4,  const Noeud& n5);
 #endif
-  Polyedre(const Noeud& n0,  const Noeud& n1,
-	   const Noeud& n2,  const Noeud& n3,
-	   const Noeud& n4,  const Noeud& n5);
+  Polyedre(const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3, const Noeud& n4,  const Noeud& n5);
 #ifdef SWIG
-  %name(Hexaedre)
+  %rename(Hexaedre) Polyedre(const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3, const Noeud& n4,  const Noeud& n5, const Noeud& n6,  const Noeud& n7);
 #endif
-  Polyedre(const Noeud& n0,  const Noeud& n1,
-	   const Noeud& n2,  const Noeud& n3,
-	   const Noeud& n4,  const Noeud& n5,
-	   const Noeud& n6,  const Noeud& n7);
+  Polyedre(const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3, const Noeud& n4,  const Noeud& n5, const Noeud& n6,  const Noeud& n7);
 #ifdef SWIG
-  %name(Heptaedre)
+  %rename(Heptaedre) Polyedre(const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3, const Noeud& n4,  const Noeud& n5, const Noeud& n6,  const Noeud& n7, const Noeud& n8,  const Noeud& n9);
 #endif
-  Polyedre(const Noeud& n0,  const Noeud& n1,
-	   const Noeud& n2,  const Noeud& n3,
-	   const Noeud& n4,  const Noeud& n5,
-	   const Noeud& n6,  const Noeud& n7,
-	   const Noeud& n8,  const Noeud& n9);
+  Polyedre(const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3, const Noeud& n4,  const Noeud& n5, const Noeud& n6,  const Noeud& n7, const Noeud& n8,  const Noeud& n9);
 #ifdef SWIG
-  %name(Octoedre)
+  %rename(Octoedre) Polyedre(const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3, const Noeud& n4,  const Noeud& n5, const Noeud& n6,  const Noeud& n7, const Noeud& n8,  const Noeud& n9, const Noeud& n10,  const Noeud& n11);
 #endif
-  Polyedre(const Noeud& n0,  const Noeud& n1,
-	   const Noeud& n2,  const Noeud& n3,
-	   const Noeud& n4,  const Noeud& n5,
-	   const Noeud& n6,  const Noeud& n7,
-	   const Noeud& n8,  const Noeud& n9,
-	   const Noeud& n10,  const Noeud& n11);
+  Polyedre(const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3, const Noeud& n4,  const Noeud& n5, const Noeud& n6,  const Noeud& n7, const Noeud& n8,  const Noeud& n9, const Noeud& n10,  const Noeud& n11);
 #ifdef SWIG
-  %name(Tetraedre_id)
+  %rename(Tetraedre_id) Polyedre(size_type n, const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3);
 #endif
-  Polyedre(size_type n, const Noeud& n0,  const Noeud& n1,
-	   const Noeud& n2,  const Noeud& n3);
+  Polyedre(size_type n, const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3);
 #ifdef SWIG
-  %name(Prisme_id)
+  %rename(Prisme_id) Polyedre(size_type n, const Noeud& n0, const Noeud& n1, const Noeud& n2, const Noeud& n3,  const Noeud& n4);
 #endif
-  Polyedre(size_type n, const Noeud& n0, const Noeud& n1, 
-	   const Noeud& n2, const Noeud& n3,  const Noeud& n4);
+  Polyedre(size_type n, const Noeud& n0, const Noeud& n1, const Noeud& n2, const Noeud& n3,  const Noeud& n4);
 #ifdef SWIG
-  %name(Pyramide_id)
+  %rename(Pyramide_id) Polyedre(size_type n, const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3, const Noeud& n4,  const Noeud& n5);
 #endif
-  Polyedre(size_type n, const Noeud& n0,  const Noeud& n1,
-	   const Noeud& n2,  const Noeud& n3,
-	   const Noeud& n4,  const Noeud& n5);
+  Polyedre(size_type n, const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3, const Noeud& n4,  const Noeud& n5);
 #ifdef SWIG
-  %name(Hexaedre_id)
+  %rename(Hexaedre_id) Polyedre(size_type n, const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3, const Noeud& n4,  const Noeud& n5, const Noeud& n6,  const Noeud& n7);
 #endif
-  Polyedre(size_type n, const Noeud& n0,  const Noeud& n1,
-	   const Noeud& n2,  const Noeud& n3,
-	   const Noeud& n4,  const Noeud& n5,
-	   const Noeud& n6,  const Noeud& n7);
+  Polyedre(size_type n, const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3, const Noeud& n4,  const Noeud& n5, const Noeud& n6,  const Noeud& n7);
 #ifdef SWIG
-  %name(Heptaedre_id)
+  %rename(Heptaedre_id) Polyedre(size_type n, const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3, const Noeud& n4,  const Noeud& n5, const Noeud& n6,  const Noeud& n7, const Noeud& n8,  const Noeud& n9);
 #endif
-  Polyedre(size_type n, const Noeud& n0,  const Noeud& n1,
-	   const Noeud& n2,  const Noeud& n3,
-	   const Noeud& n4,  const Noeud& n5,
-	   const Noeud& n6,  const Noeud& n7,
-	   const Noeud& n8,  const Noeud& n9);
+  Polyedre(size_type n, const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3, const Noeud& n4,  const Noeud& n5, const Noeud& n6,  const Noeud& n7, const Noeud& n8,  const Noeud& n9);
 #ifdef SWIG
-  %name(Octoedre_id)
+  %rename(Octoedre_id) Polyedre(size_type n, const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3, const Noeud& n4,  const Noeud& n5, const Noeud& n6,  const Noeud& n7, const Noeud& n8,  const Noeud& n9, const Noeud& n10,  const Noeud& n11);
 #endif
-  Polyedre(size_type n, const Noeud& n0,  const Noeud& n1,
-	   const Noeud& n2,  const Noeud& n3,
-	   const Noeud& n4,  const Noeud& n5,
-	   const Noeud& n6,  const Noeud& n7,
-	   const Noeud& n8,  const Noeud& n9,
-	   const Noeud& n10,  const Noeud& n11);
+  Polyedre(size_type n, const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3, const Noeud& n4,  const Noeud& n5, const Noeud& n6,  const Noeud& n7, const Noeud& n8,  const Noeud& n9, const Noeud& n10,  const Noeud& n11);
 
   //! Remplace le noeud n1 par le noeud n2 pour chaque occurence existante de n1.
   void remplacer_noeud (const Noeud& n1, const Noeud& n2);

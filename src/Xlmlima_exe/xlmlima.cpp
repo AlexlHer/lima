@@ -23,7 +23,7 @@ int main (int argc, char* argv [])
 {
 	try
 	{
-		auto_ptr<XlmLimaAction>	action;
+		unique_ptr<XlmLimaAction>	action;
 		action.reset (XlmLimaFactory::createAction (argc - 1, argv + 1));
 		if (0 == action.get ( ))
 			throw XlmLimaException ("xlmlima. Erreur interne : absence d'action.");

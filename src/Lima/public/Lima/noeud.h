@@ -24,7 +24,7 @@ class Noeud : public Handle_NoeudInterne
 public:
   Noeud(double x=0, double y=0, double z=0);
 #ifdef SWIG
-  %name(Noeud_id)
+  %rename(Noeud_id) Noeud(size_type n, double x=0, double y=0, double z=0);
 #endif
   Noeud(size_type n, double x=0, double y=0, double z=0);
 

@@ -31,7 +31,7 @@ extern "C" {
 
   /** Types enum pour l'acces aux fichiers et la preparation 
    */
-  enum LM_FORMAT_FICHIER {
+  typedef enum LM_FORMAT_FICHIER {
     /** Detection du format par le suffixe du nom du fichier.
      * Formats utilises pour la lecture et l'ecriture */
     LM_FF_SUFFIXE = 0, 
@@ -89,14 +89,13 @@ extern "C" {
    LM_FF_MALIPP2 = 15,
 #endif
     LM_FF_INCONNU
-  };  
-  typedef enum LM_FORMAT_FICHIER LM_FORMAT_FICHIER;
+  } LM_FORMAT_FICHIER;  
 
 
   /** Niveau de preparation du maillage pour les codes 
    * (verification et traitement) 
    */
-  enum LM_PREPARATION {
+  typedef enum LM_PREPARATION {
     /** Preparation minimale. Verification d'integrite uniquement. 
 	Seul les donnees de base sont autorise en consultation */
     LM_PR_MINIMALE = 1, 
@@ -112,9 +111,7 @@ extern "C" {
     LM_PR_BASE_3D = 6,
     LM_PR_CODE_T = 7,
     LM_PR_INCONNU
-  };
-  typedef enum LM_PREPARATION LM_PREPARATION;
-
+  } LM_PREPARATION;
 
 
 #ifdef __INTERNE_MACHINE_TYPES

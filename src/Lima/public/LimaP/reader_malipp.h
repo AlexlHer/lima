@@ -161,7 +161,7 @@ private:
 	IN_H5 Group							m_meshGroup;
 
 	//! Le fichier HDF contenant le maillage.
-	IN_STD auto_ptr<IN_H5 H5File>		m_hdfFile;
+	IN_STD unique_ptr<IN_H5 H5File>		m_hdfFile;
 
 	//! Faut-il forcer la compression des datasets avec la zlib ?
 	bool								m_forceZlib;

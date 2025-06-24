@@ -1104,7 +1104,7 @@ class MaliPPReader2
 	Composition							m_composition_polyedres;
 
 	/** Le fichier HDF. */
-	IN_STD auto_ptr<H5::H5File>		m_fichier_hdf;
+	IN_STD unique_ptr<H5::H5File>		m_fichier_hdf;
 
 	/** Le maillage. */
 	H5::Group							m_maillage_hdf;
@@ -1253,7 +1253,7 @@ class MaliPPWriter2
 	H5::Group							m_meshGroup;
 
 	//! Le fichier HDF contenant le maillage.
-	IN_STD auto_ptr<H5::H5File>		m_hdfFile;
+	IN_STD unique_ptr<H5::H5File>		m_hdfFile;
 
 	//! Dimension du maillage.
 	dim_t m_dim;

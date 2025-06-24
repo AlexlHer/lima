@@ -24,44 +24,37 @@ class Polygone : public Handle_PolygoneInterne
 public:
   Polygone();
 #ifdef SWIG
-  %name(Triangle)
+  %rename(Triangle) Polygone(const Noeud& n0,  const Noeud& n1, const Noeud& n2);
 #endif
   Polygone(const Noeud& n0,  const Noeud& n1, const Noeud& n2);
 #ifdef SWIG
-  %name(Quadrangle)
+  %rename(Quadrangle) Polygone(const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3);
 #endif
-  Polygone(const Noeud& n0,  const Noeud& n1, 
-	   const Noeud& n2,  const Noeud& n3);
+  Polygone(const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3);
 #ifdef SWIG
-  %name(Pentagone)
+  %rename(Pentagone) Polygone(const Noeud& n0,  const Noeud& n1, const Noeud& n2, const Noeud& n3,  const Noeud& n4);
 #endif
-  Polygone(const Noeud& n0,  const Noeud& n1, const Noeud& n2,
-	   const Noeud& n3,  const Noeud& n4);
+  Polygone(const Noeud& n0,  const Noeud& n1, const Noeud& n2, const Noeud& n3,  const Noeud& n4);
 #ifdef SWIG
-  %name(Hexagone)
+  %rename(Hexagone) Polygone(const Noeud& n0,  const Noeud& n1, const Noeud& n2, const Noeud& n3,  const Noeud& n4, const Noeud& n5);
 #endif
-  Polygone(const Noeud& n0,  const Noeud& n1, const Noeud& n2,
-	   const Noeud& n3,  const Noeud& n4, const Noeud& n5);
+  Polygone(const Noeud& n0,  const Noeud& n1, const Noeud& n2, const Noeud& n3,  const Noeud& n4, const Noeud& n5);
 #ifdef SWIG
-  %name(Triangle_id)
+  %rename(Triangle_id) Polygone(size_type n, const Noeud& n0,  const Noeud& n1, const Noeud& n2);
 #endif
   Polygone(size_type n, const Noeud& n0,  const Noeud& n1, const Noeud& n2);
 #ifdef SWIG
-  %name(Quadrangle_id)
+  %rename(Quadrangle_id) Polygone(size_type n, const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3);
 #endif
-  Polygone(size_type n, const Noeud& n0,  const Noeud& n1, 
-	   const Noeud& n2,  const Noeud& n3);
+  Polygone(size_type n, const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3);
 #ifdef SWIG
-  %name(Pentagone_id)
+  %rename(Pentagone_id) Polygone(size_type n, const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3,  const Noeud& n4);
 #endif
-  Polygone(size_type n, const Noeud& n0,  const Noeud& n1, 
-	   const Noeud& n2,  const Noeud& n3,  const Noeud& n4);
+  Polygone(size_type n, const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3,  const Noeud& n4);
 #ifdef SWIG
-  %name(Hexagone_id)
+  %rename(Hexagone_id) Polygone(size_type n, const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3,  const Noeud& n4,const Noeud& n5);
 #endif
-  Polygone(size_type n, const Noeud& n0,  const Noeud& n1, 
-	   const Noeud& n2,  const Noeud& n3,  const Noeud& n4,
-	   const Noeud& n5);
+  Polygone(size_type n, const Noeud& n0,  const Noeud& n1, const Noeud& n2,  const Noeud& n3,  const Noeud& n4,const Noeud& n5);
 
 #ifndef SWIG
   Polygone(_PolygoneInterne* ptr);
